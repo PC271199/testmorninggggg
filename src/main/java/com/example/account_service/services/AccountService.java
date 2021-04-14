@@ -44,7 +44,7 @@ public class AccountService {
 		return accrepo.findAll();
 	}
 	public Account findById(int accountId) {
-		Account result=accrepo.findById(accountId).orElseThrow();
+		Account result=accrepo.findById(accountId).get();
 		return result;
 	}
 	public Account add(Account account) {
